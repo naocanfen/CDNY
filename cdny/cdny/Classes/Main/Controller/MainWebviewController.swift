@@ -25,18 +25,12 @@ import JavaScriptCore
     //地图
     func toMap()
     
-    // js调用App方法时传递多个参数 并弹出对话框 注意js调用时的函数名
-    func showDialog(_ title: String, message: String)
-    
-    // js调用App的功能后 App再调用js函数执行回调
-    func callHandler(_ handleFuncName: String)
-    
 }
 
 // 定义一个模型 该模型实现SwiftJavaScriptDelegate协议
 @objc class SwiftJavaScriptModel: NSObject, SwiftJavaScriptDelegate {
     
-    weak var controller: UIViewController?
+    weak var controller: MainWebviewController?
     weak var jsContext: JSContext?
     
     ////资源采集
@@ -57,39 +51,55 @@ import JavaScriptCore
     }
     //地图
     func toMap(){
-        print("map")
-    }
-    
-    func showDialog(_ title: String, message: String) {
         
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "确定", style: .default, handler: nil))
-        self.controller?.present(alert, animated: true, completion: nil)
-    }
-    
-    func callHandler(_ handleFuncName: String) {
+        NetworkTools.requestData(.get, URLString: "http://httpbin.org/get", parameters: nil) { (result) in
+            print(result)
+            
+            //基本页面跳转
+            //从堆栈移除，实现返回上一级
+            //let firstViewController = FirstViewController()
+            //self.navigationController?.popViewControllerAnimated(true)
+            // 获得视图控制器中的某一视图控制器
+            //let viewController = self.navigationController?.viewControllers[0]
+            //self.navigationController?.popToViewController(viewController as! UIViewController, animated: true)
+            //返回根视图
+            //self.navigationController?.popToRootViewControllerAnimated(true)         
+        }
         
-        let jsHandlerFunc = self.jsContext?.objectForKeyedSubscript("\(handleFuncName)")
-        let dict = ["name": "sean", "age": 18] as [String : Any]
-        let _ = jsHandlerFunc?.call(withArguments: [dict])
+        //将视图入栈，实现左右跳转
+        let homeview = HomeViewController()
+        if self.controller?.navigationController == nil{
+            print("nil")
+        }
+        else{
+            self.controller?.navigationController?.pushViewController(homeview, animated: true)
+        }
     }
 }
 
 
+
+//
 class MainWebviewController: UIViewController, UIWebViewDelegate {
     
     var webView: UIWebView!
     var jsContext: JSContext!
     
+    //@IBOutlet weak var test: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //添加webview
+        addWebView()
+        
         //
-        //addWebView()
+        
+        //test.addTarget(self, action: #selector(toView), for:.touchUpInside)
     }
     
+    //添加webview
     func addWebView() {
-        
         self.webView = UIWebView(frame: self.view.bounds)
         self.view.addSubview(self.webView)
         self.webView.delegate = self
@@ -107,8 +117,6 @@ class MainWebviewController: UIViewController, UIWebViewDelegate {
     
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        
-        
         self.jsContext = webView.value(forKeyPath: "documentView.webView.mainFrame.javaScriptContext") as! JSContext
         let model = SwiftJavaScriptModel()
         model.controller = self
@@ -135,5 +143,22 @@ class MainWebviewController: UIViewController, UIWebViewDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    //
     
+    func toView(){
+        let homeview = HomeViewController()
+        if self.navigationController == nil {
+            print("is nil")
+        }
+        self.navigationController!.pushViewController(homeview, animated: true)
+    }
+    
+    //
+    override func viewWillAppear(_ animated: Bool){
+        //self.navigationController?.navigationBar.backgroundColor = RGBColorFromHex(rgbValue: 0x11CD6E)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    override func viewWillDisappear(_ animated: Bool){
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 }
