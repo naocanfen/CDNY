@@ -152,9 +152,9 @@
 		73262E081F25A24E00CA9E3F /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				73D3F6FB1F2EDA8D0040DDB6 /* Model */,
+				73D3F6FC1F2EDA8D0040DDB6 /* View */,
 				73262E091F25A24E00CA9E3F /* Controller */,
-				73262E0C1F25A24E00CA9E3F /* Model */,
-				73262E0D1F25A24E00CA9E3F /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -166,20 +166,6 @@
 				73262E0B1F25A24E00CA9E3F /* MainWebviewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		73262E0C1F25A24E00CA9E3F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		73262E0D1F25A24E00CA9E3F /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		733E97FB1F2B1CEA00AD7BD3 /* Custom */ = {
@@ -221,6 +207,9 @@
 		733E98151F2B1EB400AD7BD3 /* Company */ = {
 			isa = PBXGroup;
 			children = (
+				73D3F6FD1F2EDACE0040DDB6 /* Controller */,
+				73D3F6FE1F2EDACE0040DDB6 /* Model */,
+				73D3F6FF1F2EDACE0040DDB6 /* View */,
 			);
 			path = Company;
 			sourceTree = "<group>";
@@ -262,6 +251,41 @@
 				733E97EC1F2B1B6700AD7BD3 /* CollectionViewController.swift */,
 				733E97ED1F2B1B6700AD7BD3 /* CollectionViewCell.swift */,
 				733E97EE1F2B1B6700AD7BD3 /* LInearCollectionViewLayout.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		73D3F6FB1F2EDA8D0040DDB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		73D3F6FC1F2EDA8D0040DDB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		73D3F6FD1F2EDACE0040DDB6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		73D3F6FE1F2EDACE0040DDB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		73D3F6FF1F2EDACE0040DDB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
