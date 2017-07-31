@@ -34,6 +34,12 @@
 		733E981F1F2B1FD700AD7BD3 /* ImageBrowseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733E981B1F2B1FD700AD7BD3 /* ImageBrowseCell.swift */; };
 		733E98201F2B1FD700AD7BD3 /* ImageBrowseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 733E981C1F2B1FD700AD7BD3 /* ImageBrowseCell.xib */; };
 		73782C831F25D74C002EB705 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73782C821F25D74C002EB705 /* NetworkTools.swift */; };
+		73D3F7061F2EE7650040DDB6 /* AgriBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3F7001F2EE7650040DDB6 /* AgriBasicInfo.swift */; };
+		73D3F7071F2EE7650040DDB6 /* AgriBasicInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73D3F7011F2EE7650040DDB6 /* AgriBasicInfo.xib */; };
+		73D3F7081F2EE7650040DDB6 /* ImageBrowse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3F7021F2EE7650040DDB6 /* ImageBrowse.swift */; };
+		73D3F7091F2EE7650040DDB6 /* ImageBrowse.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73D3F7031F2EE7650040DDB6 /* ImageBrowse.xib */; };
+		73D3F70A1F2EE7650040DDB6 /* ImageBrowseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3F7041F2EE7650040DDB6 /* ImageBrowseCell.swift */; };
+		73D3F70B1F2EE7650040DDB6 /* ImageBrowseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73D3F7051F2EE7650040DDB6 /* ImageBrowseCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -78,6 +84,12 @@
 		733E981B1F2B1FD700AD7BD3 /* ImageBrowseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBrowseCell.swift; sourceTree = "<group>"; };
 		733E981C1F2B1FD700AD7BD3 /* ImageBrowseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageBrowseCell.xib; sourceTree = "<group>"; };
 		73782C821F25D74C002EB705 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		73D3F7001F2EE7650040DDB6 /* AgriBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgriBasicInfo.swift; sourceTree = "<group>"; };
+		73D3F7011F2EE7650040DDB6 /* AgriBasicInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgriBasicInfo.xib; sourceTree = "<group>"; };
+		73D3F7021F2EE7650040DDB6 /* ImageBrowse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBrowse.swift; sourceTree = "<group>"; };
+		73D3F7031F2EE7650040DDB6 /* ImageBrowse.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageBrowse.xib; sourceTree = "<group>"; };
+		73D3F7041F2EE7650040DDB6 /* ImageBrowseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBrowseCell.swift; sourceTree = "<group>"; };
+		73D3F7051F2EE7650040DDB6 /* ImageBrowseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageBrowseCell.xib; sourceTree = "<group>"; };
 		DF9B8C9917A8BAC6B4DC2880 /* Pods-cdny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cdny.release.xcconfig"; path = "Pods/Target Support Files/Pods-cdny/Pods-cdny.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -265,6 +277,12 @@
 		73D3F6FC1F2EDA8D0040DDB6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				73D3F7001F2EE7650040DDB6 /* AgriBasicInfo.swift */,
+				73D3F7011F2EE7650040DDB6 /* AgriBasicInfo.xib */,
+				73D3F7021F2EE7650040DDB6 /* ImageBrowse.swift */,
+				73D3F7031F2EE7650040DDB6 /* ImageBrowse.xib */,
+				73D3F7041F2EE7650040DDB6 /* ImageBrowseCell.swift */,
+				73D3F7051F2EE7650040DDB6 /* ImageBrowseCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -371,14 +389,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				73262DFB1F25A0AF00CA9E3F /* LaunchScreen.storyboard in Resources */,
+				73D3F70B1F2EE7650040DDB6 /* ImageBrowseCell.xib in Resources */,
 				73262DF81F25A0AF00CA9E3F /* Assets.xcassets in Resources */,
 				733E97E61F2B176C00AD7BD3 /* Add.storyboard in Resources */,
 				73262E0F1F25A24E00CA9E3F /* Main.storyboard in Resources */,
+				73D3F7091F2EE7650040DDB6 /* ImageBrowse.xib in Resources */,
 				733E98201F2B1FD700AD7BD3 /* ImageBrowseCell.xib in Resources */,
 				733E97F01F2B1B6700AD7BD3 /* ImageBrowseViewController.xib in Resources */,
 				733E981E1F2B1FD700AD7BD3 /* ImageBrowse.xib in Resources */,
 				733E97FA1F2B1C8000AD7BD3 /* Default-568h@2x.png in Resources */,
 				7321919D1F29963E00675A54 /* Home.storyboard in Resources */,
+				73D3F7071F2EE7650040DDB6 /* AgriBasicInfo.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,12 +459,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				73262DF31F25A0AF00CA9E3F /* ViewController.swift in Sources */,
+				73D3F70A1F2EE7650040DDB6 /* ImageBrowseCell.swift in Sources */,
 				733E981D1F2B1FD700AD7BD3 /* ImageBrowse.swift in Sources */,
 				73262E061F25A24100CA9E3F /* const.swift in Sources */,
 				733E97F31F2B1B6700AD7BD3 /* CollectionViewCell.swift in Sources */,
 				733E97F81F2B1C1400AD7BD3 /* NibLoadable.swift in Sources */,
+				73D3F7081F2EE7650040DDB6 /* ImageBrowse.swift in Sources */,
 				733E981F1F2B1FD700AD7BD3 /* ImageBrowseCell.swift in Sources */,
 				733E97F41F2B1B6700AD7BD3 /* LInearCollectionViewLayout.swift in Sources */,
+				73D3F7061F2EE7650040DDB6 /* AgriBasicInfo.swift in Sources */,
 				733E97E81F2B177500AD7BD3 /* AddViewController.swift in Sources */,
 				73782C831F25D74C002EB705 /* NetworkTools.swift in Sources */,
 				733E97F11F2B1B6700AD7BD3 /* ImageBrowseCollectionViewCell.swift in Sources */,
